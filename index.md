@@ -34,6 +34,9 @@ For more details see [GitHub Flavored Markdown](https://guides.github.com/featur
 
 [Link](javacript:alert(2) and ![Image](src)
 
+[Hello World!][1]
+[1]:javascript:alert('Hello World')
+
 ### Jekyll Themes
 
 Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/gludington/yawningportalsearch/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
