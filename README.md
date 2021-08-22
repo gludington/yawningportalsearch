@@ -11,5 +11,5 @@ A bookmarklet is a little snippet of javascript that can add functionality to th
 ## Why is this
 WoTC's yawning portal site lists upcoming games for Virtual Weekend and D&D Celebration events.  The games are presented as one long page.  I wanted to be able to search by game, by time, by VTT, and even by DM or other text.
 
-### How is this
+## How is this
 It works by parsing the HTML of WoTC's events page, identifying searchable parameters, and creating a form for them.  That means if WoTC changes their HTML and/or game admins start writing their game entries differently, this will break.  It works for the format WoTC has been using in 2021 to date.
