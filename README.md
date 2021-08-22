@@ -13,3 +13,6 @@ WoTC's yawning portal site lists upcoming games for Virtual Weekend and D&D Cele
 
 ## How is this
 It works by parsing the HTML of WoTC's events page, identifying searchable parameters, and creating a form for them.  That means if WoTC changes their HTML and/or game admins start writing their game entries differently, this will break.  It works for the format WoTC has been using in 2021 to date.
+
+## Thanks
+Javascript converted to bookmarklet using [YouJS Bookmarklet Creator](https://www.yourjs.com/bookmarklet/)
