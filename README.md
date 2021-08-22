@@ -1,13 +1,13 @@
 # yawningportalsearch
 
-A bookmarklet for advanced search functionality on WoTC's Yawnign Portal events page.
+A bookmarklet for advanced search functionality on Wizard of the Coast's Yawning Portal events page.
 
 ![Advanced Search](https://gludington.github.io/ypsearch.png)
 ## To install
 Please visit <a href="https://gludington.github.io/yawningportalsearch.html">the installation page to install this in your browser</a>
 
 ## What is this
-A bookmarklet is a little snippet of javascript that can add functionality to the current page.  This adds a search form to WoTC's Yawning Portal Search
+A bookmarklet is a little snippet of javascript that can add functionality to the current page.  This adds a search form to a WoTC's Yawning Portal Events Page.
 ## Why is this
 WoTC's yawning portal events pages lists popular games with talented DMs for upcoming games such as Virtual Weekend and D&D Celebration events.  These games are presented as one long page, and I wanted to be able to search by game, by time, by VTT, and even by DM or other text.
 
