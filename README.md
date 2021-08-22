@@ -4,7 +4,7 @@ A bookmarklet for advanced search functionality on Wizard of the Coast's Yawning
 
 ![Advanced Search](https://gludington.github.io/ypsearch.png)
 ## To install
-Please visit <a href="https://gludington.github.io/yawningportalsearch.html">the installation page to install this in your browser</a>
+Please visit <a href="https://gludington.github.io/yawningportalsearch/">the installation page to install this in your browser</a>
 
 ## What is this
 Yawningportalsearch is a  bookmarklet - a little snippet of javascript that can add functionality to the current page.  This bookmarklet adds a search form to a WoTC Yawning Portal Events Page.
