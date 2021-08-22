@@ -109,7 +109,6 @@ _evtSoldOutLabel.for='_evtToggleSoldOut';
 _evtToggleSoldOut.addEventListener('change', _evtSearchFn);
 _evtForm.appendChild(_evtSoldOutLabel);
 _evtForm.appendChild(_evtToggleSoldOut);
-
         _evtForm.appendChild(document.createElement('br'))
 var _evtSearch = document.createElement('input');
 _evtSearch.id='_eventSearchText';
@@ -118,7 +117,11 @@ _evtSearchLabel.for='_eventSearchText';
 _evtSearchLabel.innerHTML='<b>Full Text Search: </b>';
 _evtSearch.addEventListener('input', _evtSearchFn);
 _evtForm.appendChild(_evtSearchLabel);
-_evtForm.appendChild(_evtSearch);
+        _evtForm.appendChild(_evtSearch);
+                var _version = document.createElement('span');
+        _version.innerHTML ='&nbsp;&nbsp<a href="https://github.com/gludington/yawningportalsearch">YP Search Bookmarklet</a>, V1.0';
+        _evtForm.appendChild(_version);
+
     _evtList.parentNode.insertBefore(_evtForm, _evtList);
     
 }})();
