@@ -140,7 +140,7 @@ _evtSearch.addEventListener('input', _evtSearchFn);
 _evtForm.appendChild(_evtSearchLabel);
         _evtForm.appendChild(_evtSearch);
                 var _version = document.createElement('span');
-        _version.innerHTML ='&nbsp;&nbsp<a href="https://github.com/gludington/yawningportalsearch">YP Search Bookmarklet</a>, V1.1';
+        _version.innerHTML ='&nbsp;&nbsp<a href="https://github.com/gludington/yawningportalsearch">YP Search Bookmarklet</a>, V1.2';
         _evtForm.appendChild(_version);
 
     _evtList.parentNode.insertBefore(_evtForm, _evtList);
