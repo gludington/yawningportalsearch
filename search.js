@@ -16,9 +16,9 @@
             return select;
         }
 
-        var vttStrings = /.*(roll20|foundry|zoom|discord|owlbear|fantasy grounds).*/i;
-
-var _evtList = document.getElementsByClassName('event-list')[0];  
+    var vttStrings = /.*(roll20|foundry|zoom|discord|owlbear|fantasy grounds).*/i;
+    var tzRegex = /GMT/;
+    var _evtList = document.getElementsByClassName('event-list')[0];  
         var _evtEvents = Array.from(_evtList.children);
         // a map to dedupe titles to build a search widget
         var titles = {};
@@ -33,12 +33,12 @@ var _evtList = document.getElementsByClassName('event-list')[0];
             // [SOLD OUT] Table #7 - Introduction to Wildemount - Frozen Sick - Roll20/Zoom
             // [(sold out)? Table, Title, Vtt ]
             var title = evt.children[0].children[0].children[0].children[1].children[1].textContent;
-            console.error(title);
     if (title) {
         var meta = title.split(' - ');
         // here is where it gets complicated, because some titles have dashes in them, and some have words that correspond to vtts
         var titleArr = [];
         var vttArr = [];
+        // work backwards until we find 
         var foundVtt = false;
         for (var idx = meta.length - 1; idx > 0; idx--) {
             if (foundVtt == false) {
@@ -52,8 +52,7 @@ var _evtList = document.getElementsByClassName('event-list')[0];
         }
         var gameTitle = titleArr.join(' - ');
         var vtt = vttArr.join(' - ');
-        console.error("TITLES", gameTitle, titleArr);
-        console.error("vtts", vtt, vttArr);
+
         titles[gameTitle] = 1;
         evt._gameTitle = gameTitle;
         
@@ -63,13 +62,13 @@ var _evtList = document.getElementsByClassName('event-list')[0];
     var data = Array.from(evt.getElementsByClassName('MuiChip-label'));
     var day;
     var time;
-    data.forEach(d => {
+            data.forEach(d => {
+        //a node with AL in it describes the campaign
         if (d.textContent.indexOf('AL') == -1) {
-            
-            if (d.textContent.indexOf('day') > -1) {
-                day = d.textContent;
-            } else {
+            if (tzRegex.test(d.textContent)) {
                 time = d.textContent;
+            } else {
+                day = d.textContent;
             }
         }
     });
