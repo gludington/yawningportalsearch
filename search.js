@@ -16,25 +16,47 @@
             return select;
         }
 
+        var vttStrings = /.*(roll20|foundry|zoom|discord|owlbear|fantasy grounds).*/i;
+
 var _evtList = document.getElementsByClassName('event-list')[0];  
         var _evtEvents = Array.from(_evtList.children);
+        // a map to dedupe titles to build a search widget
         var titles = {};
+        // a map to dedupe titles to build a vtt widget
         var vtts = {};
+        // a map to dedupe start times to build a start time widget
         var starts = {};
-_evtEvents.forEach(evt => {
-    
-    var title = evt.children[0].children[0].children[0].children[1].children[1].textContent;
+        _evtEvents.forEach(evt => {
+            // sold out games have the text SOLD OUT in them
+            evt._soldOut = evt.innerHTML.indexOf("SOLD OUT") > -1;
+            // the title block is dash delimited, e.g. 
+            // [SOLD OUT] Table #7 - Introduction to Wildemount - Frozen Sick - Roll20/Zoom
+            // [(sold out)? Table, Title, Vtt ]
+            var title = evt.children[0].children[0].children[0].children[1].children[1].textContent;
+            console.error(title);
     if (title) {
         var meta = title.split(' - ');
-        var title = meta[1];
-        titles[title] = 1;
-            evt._gameTitle = title;
-        var vtt;
-        if (meta.length === 4) {
-            vtt = meta[2] + ' - ' + meta[3];
-        } else {
-            vtt = meta[2];
+        // here is where it gets complicated, because some titles have dashes in them, and some have words that correspond to vtts
+        var titleArr = [];
+        var vttArr = [];
+        var foundVtt = false;
+        for (var idx = meta.length - 1; idx > 0; idx--) {
+            if (foundVtt == false) {
+                vttArr.unshift(meta[idx]);
+                if (vttStrings.test(meta[idx])) {
+                    foundVtt = true;
+                }
+            } else {
+                titleArr.unshift(meta[idx]);
+            }
         }
+        var gameTitle = titleArr.join(' - ');
+        var vtt = vttArr.join(' - ');
+        console.error("TITLES", gameTitle, titleArr);
+        console.error("vtts", vtt, vttArr);
+        titles[gameTitle] = 1;
+        evt._gameTitle = gameTitle;
+        
         vtts[vtt] = 1;
         evt._vtt = vtt;
     }
@@ -64,7 +86,7 @@ var _evtSearchFn = () => {
     const hideChecked = _evtToggleSoldOut.checked;
         _evtEvents.forEach(ele => {
         if (!(searchText === '' || ele.innerHTML.toLowerCase().indexOf(searchText) > -1)
-            || (hideChecked === true && ele.innerHTML.indexOf('SOLD OUT') > -1)
+            || (hideChecked === true && ele._soldOut === true)
             || (!(name === '' || ele._gameTitle === name))
             || (!(start === '' || ele._start === start))
             || (!(vtt === '' || ele._vtt === vtt))) {
@@ -119,7 +141,7 @@ _evtSearch.addEventListener('input', _evtSearchFn);
 _evtForm.appendChild(_evtSearchLabel);
         _evtForm.appendChild(_evtSearch);
                 var _version = document.createElement('span');
-        _version.innerHTML ='&nbsp;&nbsp<a href="https://github.com/gludington/yawningportalsearch">YP Search Bookmarklet</a>, V1.0';
+        _version.innerHTML ='&nbsp;&nbsp<a href="https://github.com/gludington/yawningportalsearch">YP Search Bookmarklet</a>, V1.1';
         _evtForm.appendChild(_version);
 
     _evtList.parentNode.insertBefore(_evtForm, _evtList);

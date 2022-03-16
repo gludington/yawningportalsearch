@@ -14,5 +14,9 @@ WoTC's yawning portal events pages lists popular games with talented DMs for upc
 ## How is this
 It works by parsing the HTML of WoTC's events page, identifying searchable parameters, and creating a form for them.  That means if WoTC changes their HTML and/or game admins start writing their game entries differently, this will break.  It works for the format WoTC has been using in 2021 to date.  If something changes and breaks the parsing, feel free to [file an issue](https://github.com/gludington/yawningportalsearch/issues).
 
+## Versions
+
+1. 1.0 - sometime in 2021: initial release
+2. 1.1 - 2022-03-15: improved handling of titles with dashes
 ## Thanks
 Javascript converted to bookmarklet using [YouJS Bookmarklet Creator](https://www.yourjs.com/bookmarklet/)
