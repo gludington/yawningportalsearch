@@ -1,0 +1,32 @@
+{
+  "name": "yawningportalsearch",
+  "version": "1.3.0",
+  "description": "An extension to inject search capabilities to a Yawning Portal upcoming events page",
+  "main": "search.js",
+  "scripts": {
+    "build": "npm run clean && npm run mkdirs && npm run generate",
+    "mkdirs": "mkdir dist && mkdir dist/bookmarklet && mkdir dist/chrome && mkdir dist/firefox",
+    "prepare": "cp src/search.js dist/work.js && replace-in-file @@VERSION@@ $npm_package_version dist/work.js && replace-in-file @@HOMEPAGE@@ $npm_package_homepage dist/work.js",
+    "closure": "google-closure-compiler dist/work.js > dist/search.js && rm dist/work.js",
+    "generate": "npm run prepare && npm run closure && npm run bookmarklet && npm run chrome && npm run firefox",
+    "bookmarklet": "bookmarklet dist/search.js dist/bookmarklet/bookmarklet.js",
+    "chrome": "cp src/extensions/chrome/manifest.json dist/chrome/. && cp dist/search.js dist/chrome/search.js",
+    "firefox": "cp src/extensions/firefox/manifest.json dist/firefox/. && cp dist/search.js dist/firefox/search.js",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gludington/yawningportalsearch.git"
+  },
+  "author": "Greg Ludington",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gludington/yawningportalsearch/issues"
+  },
+  "homepage": "https://github.com/gludington/yawningportalsearch",
+  "devDependencies": {
+    "bookmarklet": "^3.0.0",
+    "google-closure-compiler": "^20220301.0.0",
+    "replace-in-file": "^6.3.2"
+  }
+}

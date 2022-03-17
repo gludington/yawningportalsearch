@@ -1,0 +1,17 @@
+{
+    "manifest_version": 3,
+    "name": "Yawning Portal Search",
+    "version": "1.3",
+    "description": " - Creates a Search Widget on an Upcoming Events Page",
+    "homepage_url": "https://gludington.github.io/yawningportalsearch/",
+    "permissions": [
+        "tabs"
+    ],
+    "host_permissions": [
+        "https://*.dnd.wizards.com/"
+    ],
+    "content_scripts": [{
+        "matches": ["https://*.dnd.wizards.com/*"],
+        "js":["search.js"]
+    }]
+}
