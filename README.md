@@ -17,6 +17,8 @@ It works by parsing the HTML of WoTC's events page, identifying searchable param
 ## Versions
 
 1. 1.0 - sometime in 2021: initial release
-2. 1.1 - 2022-03-15: improved handling of titles with dashes
+2. 1.1 - 2022-03-15: improved handling of titles with dashes]
+3. 1.2 - 2022-03-15: change date/time parsing hooks to work against "GMT" instead of anything language-specific, as we now have Portuguese as well as English games
+
 ## Thanks
 Javascript converted to bookmarklet using [YouJS Bookmarklet Creator](https://www.yourjs.com/bookmarklet/)
