@@ -10,8 +10,8 @@
     "closure": "google-closure-compiler dist/work.js > dist/search.js && rm dist/work.js",
     "generate": "npm run prepare && npm run closure && npm run bookmarklet && npm run chrome && npm run firefox",
     "bookmarklet": "bookmarklet dist/search.js dist/bookmarklet/bookmarklet.js",
-    "chrome": "cp src/extensions/chrome/manifest.json dist/chrome/. && cp dist/search.js dist/chrome/search.js",
-    "firefox": "cp src/extensions/firefox/manifest.json dist/firefox/. && cp dist/search.js dist/firefox/search.js",
+    "chrome": "cp src/extensions/chrome/* dist/chrome/. && cp src/extensions/images/*.png dist/chrome/. && cp dist/search.js dist/chrome/search.js",
+    "firefox": "cp src/extensions/firefox/manifest.json dist/firefox/. && cp src/extensions/images/*.png dist/firefox/. && cp dist/search.js dist/firefox/search.js",
     "clean": "rm -rf dist"
   },
   "repository": {
@@ -26,7 +26,9 @@
   "homepage": "https://github.com/gludington/yawningportalsearch",
   "devDependencies": {
     "bookmarklet": "^3.0.0",
+    "firefox-xpi": "^2.0.5",
     "google-closure-compiler": "^20220301.0.0",
-    "replace-in-file": "^6.3.2"
+    "replace-in-file": "^6.3.2",
+    "xpi-creator": "^1.2.2"
   }
 }

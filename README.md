@@ -21,4 +21,4 @@ It works by parsing the HTML of WoTC's events page, identifying searchable param
 3. 1.2 - 2022-03-15: change date/time parsing hooks to work against "GMT" instead of anything language-specific, as we now have Portuguese as well as English games
 
 ## Thanks
-Javascript converted to bookmarklet using [YouJS Bookmarklet Creator](https://www.yourjs.com/bookmarklet/)
+Icon converted to bookmarklet using [Dungeon icons created by Smashicons - Flaticon](https://www.flaticon.com/free-icons/dungeon)
