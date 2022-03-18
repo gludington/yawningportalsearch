@@ -10,9 +10,6 @@
         "48": "d20_48.png",
         "128": "d20_128.png"
     },
-    "permissions": [
-        "tabs"
-    ],
     "content_scripts": [{
         "matches": ["https://*.dnd.wizards.com/*"],
         "js":["search.js"]
