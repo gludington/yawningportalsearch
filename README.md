@@ -18,9 +18,13 @@ It works by parsing the HTML of WoTC's events page, identifying searchable param
 node and npm on a UNIX-like shell are required to build this project.  Primary development is done on OSX, using node v12.22.1 and npm6.14.12,
 though there should be no issues with later versions of node or npm
 
+`npm install`
+
+will install necessary modules and dependencies, after which
+
 `npm run build`
 
-will build a dist folder, with one folder each for the bookmarklet,
+will create a dist folder, with one folder each for the bookmarklet,
 chrome, and firefox output
 ## Versions
 
