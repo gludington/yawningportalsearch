@@ -4,30 +4,12 @@ A bookmarklet and browser exstension for advanced search functionality on Wizard
 
 ![Advanced Search](https://gludington.github.io/ypsearch.png)
 ## To install - browser extension
-
 ### Chrome
 
-This has been submitted to the chrome web store, but, until it is approved, it can only be installed manually, as an unpacked extension
-1. Go to the [Release Page](https://github.com/gludington/yawningportalsearch/releases/tag/v.1.2.0)
-2. Download the chrome.zip file
-3. Extract to your desired location
-4. Install as an unpacked extension
-* Enter `chrome://extensions` in your browser bar
-* Turn on the switch on the top right of the page that says "Developer mode"
-* Click on the button on the top left of the page that says "Load unpacked"
-* Browse to the folder where you extracted the extension
-
+Install at the [Chrome Web Store](https://chrome.google.com/webstore/detail/yawning-portal-search/dfaicgiaobejpiiddamoimobkbpmikig)   
 
 ### Firefox
-This has been submitted to the firefox web store, but, until it is approved, it can only be installed manually, as a temporary addd-on
-1. Go to the [Release Page](https://github.com/gludington/yawningportalsearch/releases/tag/v.1.2.0)
-2. Download the firefox.zip file
-3. Extract to your desired location
-4. Install as an temporary add-on
-* Enter `about:debugging` in your browser bar
-* Click on "This Firefox"
-* Click "Load Temporary Add-on"
-* Browse to the folder where you extracted the extension, and select the manifest.json
+Install at the [Firefox Add-Ons Store](https://addons.mozilla.org/en-US/firefox/addon/yawning-portal-search/)
 
 ## To install - bookmarklet
 Please visit <a href="https://gludington.github.io/yawningportalsearch/">the installation page to install this in your browser</a>
