@@ -51,34 +51,20 @@
           <h2>Description</h2>
           <p>This adds a search for to a Wizards of the Coast events page.  It does not take you to an events page.  You must load the events page first, then run this bookmarklet.</p>
           <p><img src="ypsearch.png"/></p>
-    <h2>Installation</h2>
-    <h3>Browser Extensions</h3>
-    <h4>Chrome</h4>
-<p>This has been submitted to the chrome web store, but, until it is approved, it can only be installed manually, as an unpacked extension</p>
-<ol>
-  <li>Go to the <a href="https://github.com/gludington/yawningportalsearch/releases/tag/v.1.2.0">Release Page</a></li>
-  <li>Download the chrome.zip file</li>
-  <li>Extract to your desired location</li>
-  <li>Install as an unpacked extension</li>
-  <li>Enter `chrome://extensions` in your browser bar</li>
-  <li>Turn on the switch on the top right of the page that says "Developer mode"</li>
-  <li>Click on the button on the top left of the page that says "Load unpacked"</li>
-  <li>Browse to the folder where you extracted the extension</li>
-</ol>
-<h4>Firefox</h4>
-<p>This has been submitted to the firefox web store, but, until it is approved, it can only be installed manually, as a temporary addd-on</p>
-<ol>
-  <li>Go to the <a href="https://github.com/gludington/yawningportalsearch/releases/tag/v.1.2.0">Release Page</a></li>
-<li>Download the firefox.zip file</li>
-<li>Extract to your desired location</li>
-<li>Install as an temporary add-on</li>
-<li>Enter `about:debugging` in your browser bar</li>
-<li>Click on "This Firefox"</li>
-<li>Click "Load Temporary Add-on"</li>
-<li>Browse to the folder where you extracted the extension, and select the manifest.json</li>
-</ol>
-<h3>Bookmarklet</h3>
-    <h4>Desktop browsers</h4>
+    <h2>Browser Extensions</h2>
+    <p>Using a browser extension, when you get to a page on the Yawning Portal, a search widget will automatically show on each long upcoming listings page</p>
+    <table>
+      <tr align="center">
+        <td><a href="https://chrome.google.com/webstore/detail/yawning-portal-search/dfaicgiaobejpiiddamoimobkbpmikig?hl=en&authuser=0"><img src="chrome.png"/></a>
+          <br/><a href="https://chrome.google.com/webstore/detail/yawning-portal-search/dfaicgiaobejpiiddamoimobkbpmikig?hl=en&authuser=0">Get for Chrome</a>
+        </td>
+        <td><a href="https://addons.mozilla.org/en-US/firefox/addon/yawning-portal-search/"><img src="firefox.png"/></a>
+          <br/><a href="https://addons.mozilla.org/en-US/firefox/addon/yawning-portal-search/">Get for Firefox</a></td>
+      </tr>
+    </table>
+    <h2>Bookmarklet</h2>
+    <p>Bookmarklets are a way to get the same functionality on browsers that do not have a packaged extension.</p>
+    <h3>Desktop browsers</h3>
     <ul>
       <li>On desktop browsers, drag this link: <a href="javascript:(function()%7Bif(null%3D%3D%3Ddocument.getElementById(%22_eventSearchForm%22))%7Bvar%20f%3Dfunction(e)%7Bvar%20a%3Ddocument.createElement(%22select%22)%2Cb%3Ddocument.createElement(%22option%22)%3Bb.value%3D%22%22%3Bb.innerText%3D%22Any%22%3Ba.appendChild(b)%3Be.forEach(function(h)%7Bvar%20k%3Ddocument.createElement(%22option%22)%3Bk.value%3Dh%3Bk.innerText%3Dh%3Ba.appendChild(k)%7D)%3Breturn%20a%7D%2CB%3D%2F.*(roll20%7Cfoundry%7Czoom%7Cdiscord%7Cowlbear%7Cfantasy%20grounds).*%2Fi%2CC%3D%2FGMT%2F%2Cx%3Ddocument.getElementsByClassName(%22event-list%22)%5B0%5D%2Cy%3DArray.from(x.children)%2Cn%3D%7B%7D%2Cp%3D%7B%7D%2Cq%3D%7B%7D%3By.forEach(function(e)%7Be._soldOut%3D-1%3Ce.innerHTML.indexOf(%22SOLD%20OUT%22)%3Bvar%20a%3De.children%5B0%5D.children%5B0%5D.children%5B0%5D.children%5B1%5D.children%5B1%5D.textContent%3Bif(a)%7Bvar%20b%3Da.split(%22%20-%20%22)%2Ch%3D%5B%5D%3Ba%3D%5B%5D%3Bfor(var%20k%3D!1%2Cd%3Db.length-1%3B0%3Cd%3Bd--)0%3D%3Dk%3F(a.unshift(b%5Bd%5D)%2CB.test(b%5Bd%5D)%26%26(k%3D!0))%3Ah.unshift(b%5Bd%5D)%3Bb%3Dh.join(%22%20-%20%22)%3Ba%3Da.join(%22%20-%20%22)%3Bn%5Bb%5D%3D1%3Be._gameTitle%3Db%3Bp%5Ba%5D%3D1%3Be._vtt%3Da%7Dvar%20z%2CA%3BArray.from(e.getElementsByClassName(%22MuiChip-label%22)).forEach(function(r)%7B-1%3D%3Dr.textContent.indexOf(%22AL%22)%26%26(C.test(r.textContent)%3FA%3Dr.textContent%3Az%3Dr.textContent)%7D)%3Ba%3Dz%2B%22%20%22%2BA%3Bq%5Ba%5D%3D1%3Be._start%3Da%7D)%3Bvar%20l%3Dfunction()%7Bvar%20e%3Dt.value.toLowerCase()%2Ca%3Du.options%5Bu.selectedIndex%5D.value%2Cb%3Dv.options%5Bv.selectedIndex%5D.value%2Ch%3Dw.options%5Bw.selectedIndex%5D.value%2Ck%3Dm.checked%3By.forEach(function(d)%7B!(%22%22%3D%3D%3De%7C%7C-1%3Cd.innerHTML.toLowerCase().indexOf(e))%7C%7C!0%3D%3D%3Dk%26%26!0%3D%3D%3Dd._soldOut%7C%7C%22%22!%3D%3Da%26%26d._gameTitle!%3D%3Da%7C%7C%22%22!%3D%3Dh%26%26d._start!%3D%3Dh%7C%7C%22%22!%3D%3Db%26%26d._vtt!%3D%3Db%3Fd.style.display%3D%22none%22%3Ad.style.display%3D%22block%22%7D)%7D%3Bn%3DObject.keys(n).sort()%3Bp%3DObject.keys(p).sort()%3Bq%3DObject.keys(q)%3Bvar%20c%3Ddocument.createElement(%22div%22)%3Bc.id%3D%22_eventSearchForm%22%3Bvar%20g%3Ddocument.createElement(%22label%22)%3Bg%5B%22for%22%5D%3D%22_nameFilter%22%3Bg.innerHTML%3D%22%3Cb%3EGame%3A%20%3C%2Fb%3E%22%3Bc.appendChild(g)%3Bvar%20u%3Df(n)%3Bu.onchange%3Dl%3Bc.appendChild(u)%3Bg%3Ddocument.createElement(%22label%22)%3Bg%5B%22for%22%5D%3D%22_startFilter%22%3Bg.innerHTML%3D%22%3Cb%3EStarting%3A%20%3C%2Fb%3E%22%3Bc.appendChild(g)%3Bvar%20w%3Df(q)%3Bw.onchange%3Dl%3Bc.appendChild(w)%3Bg%3Ddocument.createElement(%22label%22)%3Bg%5B%22for%22%5D%3D%22_vttFilter%22%3Bg.innerHTML%3D%22%3Cb%3EVTT%3A%20%3C%2Fb%3E%22%3Bc.appendChild(g)%3Bvar%20v%3Df(p)%3Bv.onchange%3Dl%3Bc.appendChild(v)%3Bvar%20m%3Ddocument.createElement(%22input%22)%3Bm.id%3D%22_evtToggleSoldOut%22%3Bm.type%3D%22checkbox%22%3Bf%3Ddocument.createElement(%22label%22)%3Bf.innerHTML%3D%22%3Cb%3EHide%20Sold%20Out%3A%20%3C%2Fb%3E%22%3Bf%5B%22for%22%5D%3D%22_evtToggleSoldOut%22%3Bm.addEventListener(%22change%22%2Cl)%3Bc.appendChild(f)%3Bc.appendChild(m)%3Bc.appendChild(document.createElement(%22br%22))%3Bvar%20t%3Ddocument.createElement(%22input%22)%3Bt.id%3D%22_eventSearchText%22%3Bf%3Ddocument.createElement(%22label%22)%3Bf%5B%22for%22%5D%3D%22_eventSearchText%22%3Bf.innerHTML%3D%22%3Cb%3EFull%20Text%20Search%3A%20%3C%2Fb%3E%22%3Bt.addEventListener(%22input%22%2Cl)%3Bc.appendChild(f)%3Bc.appendChild(t)%3Bl%3Ddocument.createElement(%22span%22)%3Bl.innerHTML%3D'%26nbsp%3B%26nbsp%3Ca%20href%3D%22https%3A%2F%2Fgithub.com%2Fgludington%2Fyawningportalsearch%22%3EYP%20Search%20Bookmarklet%3C%2Fa%3E%2C%20V1.2'%3Bc.appendChild(l)%3Bx.parentNode.insertBefore(c%2Cx)%7D%7D)()%3Bvoid+0">Yawning Portal Search</a>
         to your browser's bookmarks toolbar</li>
