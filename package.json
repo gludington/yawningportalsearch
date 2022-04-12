@@ -1,6 +1,6 @@
 {
   "name": "yawningportalsearch",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "An extension to inject search capabilities to a Yawning Portal upcoming events page",
   "main": "search.js",
   "scripts": {
