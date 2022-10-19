@@ -152,7 +152,8 @@
                         }
                     }
                     
-                    var start = day + ' ' + time;
+                    var start = (day === undefined && time === undefined) ? 'Unknown'
+                        : (day === undefined ? 'Unknown' : day) + ' ' + (time === undefined ? 'Unknown' : time);
                     starts[start] = 1;
                     evt._start = start;
                 })
