@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Yawning Portal Search",
-    "version": "1.5",
+    "version": "1.6",
     "description": " - Creates a Search Widget on an Upcoming Events Page",
     "homepage_url": "https://gludington.github.io/yawningportalsearch/",
      "icons": {
