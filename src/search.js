@@ -44,7 +44,7 @@
                     } else {
                          title = evt.children[0].children[0].children[0].children[1].children[1].textContent;
                     }
-
+                    console.error(title);
                     if (title) {
                         var meta = title.split(/ [‒-] /);
                         // here is where it gets complicated, because some titles have dashes in them, and some have words that correspond to vtts
@@ -151,9 +151,7 @@
                           });
                         }
                     }
-                    if (day.indexOf('AL') > -1) {
-                        debugger;
-                    }
+                    
                     var start = day + ' ' + time;
                     starts[start] = 1;
                     evt._start = start;
