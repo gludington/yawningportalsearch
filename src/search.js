@@ -44,7 +44,7 @@
                     } else {
                          title = evt.children[0].children[0].children[0].children[1].children[1].textContent;
                     }
-                    console.error(title);
+
                     if (title) {
                         var meta = title.split(/ [‒-] /);
                         // here is where it gets complicated, because some titles have dashes in them, and some have words that correspond to vtts
@@ -123,7 +123,7 @@
                             var dataStr = dataDiv.getAttribute("data-tags");
                             var dataTags = dataStr.split(",");
                             for (var dt of dataTags) {
-                              if (!campaignRegex.test(d.textContent)) {
+                              if (!campaignRegex.test(dt)) {
                                 if (tzRegex.test(dt)) {
                                   time = dt;
                                 } else {
@@ -138,16 +138,18 @@
                         } else {
                           data.forEach((d) => {
                             //a node with AL in it describes the campaign
-                            if (!campaignRegex.test(d.textContent)) {
-                              if (tzRegex.test(d.textContent)) {
-                                time = d.textContent;
-                              } else {
-                                day = d.textContent;
+                              if (d && d.textContent) {
+                                  if (!campaignRegex.test(d.textContent)) {
+                                      if (tzRegex.test(d.textContent)) {
+                                          time = d.textContent;
+                                      } else {
+                                          day = d.textContent;
+                                      }
+                                  } else {
+                                      evt._campaign = d.textContent;
+                                      campaigns[d.textContent] = 1;
+                                  }
                               }
-                            } else {
-                              evt._campaign = d.textContent;
-                              campaigns[d.textContent] = 1;
-                            }
                           });
                         }
                     }
